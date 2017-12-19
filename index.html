@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>exosjsplusmoins</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+
+    <h1>jeu à la con</h1>
+
+    <div class="partigauche">voici un petit jeu à la con !!! trouver un nombre compris entre 1 et 100</div>
+    <div class="partidroite">plus ou moins</div>
+
+
+
+    <input type="text" name="saisie" id="input"  placeholder="saisie">
+    <button type="button" name="bouton" onclick="saisie()" >envoyer</button>
+
+
+
+
+<script>
+function saisie() {
+  var choix=  document.getElementById('input').value;
+  console.log(choix);
+}
+
+console.log("début du script");
+    var min = 1;
+    var max = 100;
+    var compteur=0;
+
+
+    var nb = Math.floor(Math.random() *(max - min + 1)) + min;
+    console.log(nb + ("choisi par l'ia" ));
+
+while (nb!=saisiejoueur)
+{
+
+
+
+    var saisiejoueur = prompt("saisir un chiffre entre 1 et 100");
+console.log(saisiejoueur + ("saisie par l'utilisateur" ));
+
+          if (nb>saisiejoueur) {
+            alert("c'est plus");
+              compteur++; }
+          else if (nb<saisiejoueur) {
+            alert("c'est moins");
+              compteur++;  }
+            else if (isNaN(saisiejoueur)) {
+              alert("erreur, veuillez saisir un chiffre");
+            }
+          else  {
+
+            alert("gagné");  }
+
+console.log(compteur+("tour"));
+}
+
+console.log("fin du scripte")
+</script>
+
+  </body>
+</html>
